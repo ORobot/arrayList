@@ -25,16 +25,16 @@ public:
 			~illegalIndex() {}
 	};
 
+	
+	arrayList(int initialCapacity = 10);
+	arrayList(const arrayList<T>&);
+	~arrayList() { delete[] element; }
 
-  arrayList(int initialCapacity = 10);
-  arrayList(const arrayList<T>&);
-  ~arrayList() { delete[] element; }
-
-  bool empty() const { return listSize == 0; }  //为空返回真, 否则为假
-  int size() const { return listSize; }					//返回数组的大小
+	bool empty() const { return listSize == 0; }  //为空返回真, 否则为假
+	int size() const { return listSize; }					//返回数组的大小
 	void trimToSize();
-  T& get(int theIndex) const;										//按索引访问元素
-  int indexOf(const T& theElement) const;				//访问元素的索引
+	T& get(int theIndex) const;										//按索引访问元素
+	int indexOf(const T& theElement) const;				//访问元素的索引
 	int lastIndexOf(const T&) const;
 	void insert(int theIndex, const T& theElement);
 	void erase(int theIndex);
